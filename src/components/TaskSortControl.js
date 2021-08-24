@@ -14,7 +14,7 @@ class Sort extends Component {
 
   render() {
     var { sort } = this.props;
-
+    let url = "#";
     return (
       <div className="col-md-6">
         <div className="dropdown">
@@ -24,7 +24,7 @@ class Sort extends Component {
 
           <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a
-              href="/#"
+              href={url}
               role="button"
               className={(sort.by === "name" && sort.value === 1) ? "dropdown-item sort-selected" : "dropdown-item"}
               onClick={() => this.onClick("name", 1)}
@@ -32,7 +32,7 @@ class Sort extends Component {
               Tên A-Z
             </a>
             <a
-              href="/#"
+              href={url}
               role="button"
               className={(sort.by === "name" && sort.value === -1) ? "dropdown-item sort-selected" : "dropdown-item"}
               onClick={() => this.onClick("name", -1)}
@@ -40,14 +40,14 @@ class Sort extends Component {
               Tên Z-A</a>
             <hr />
             <a
-              href="/#"
+              href={url}
               role="button"
               className={(sort.by === "status" && sort.value === 1) ? "dropdown-item sort-selected" : "dropdown-item"}
               onClick={() => this.onClick("status", 1)}
             >
               Trang thái: Kích hoạt</a>
             <a
-              href="/#"
+              href={url}
               role="button"
               className={(sort.by === "status" && sort.value === -1) ? "dropdown-item sort-selected" : "dropdown-item"}
               onClick={() => this.onClick("status", -1)}
